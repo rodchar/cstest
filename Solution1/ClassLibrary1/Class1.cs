@@ -12,5 +12,16 @@ namespace ClassLibrary1
         {
             return x + y;
         }
+
+        public static decimal Add(string a, string b)
+        {
+            decimal x;
+            decimal y;
+
+            decimal.TryParse(a, out x);
+            decimal.TryParse(b, out y);
+
+            return Add(x, y);
+        }
     }
 }
