@@ -26,5 +26,7 @@ namespace UnitTestProject1
 
             Assert.AreEqual(expected, actual);
         }
+
+        //Testing new branch
     }
 }
