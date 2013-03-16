@@ -14,6 +14,10 @@ namespace BPRewards2
             {
                 _tp1Lv = new ucListView();
                 _tp1Lv.UserControlClicked += tp1Lv_UserControlClicked;
+
+                _tp1Lv.DataSource = DAL.GetData2();
+                _tp1Lv.DataBind();
+
                 tabPage1.Controls.Add(_tp1Lv);
             }
         }

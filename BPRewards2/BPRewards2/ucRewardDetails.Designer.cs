@@ -36,13 +36,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.watermarkTextBox1 = new BPRewards2.WatermarkTextBox();
             this.ucDataGridViewHelper3 = new BPRewards2.ucDataGridViewHelper();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.ucDataGridViewHelper2 = new BPRewards2.ucDataGridViewHelper();
             this.ucDataGridViewHelper1 = new BPRewards2.ucDataGridViewHelper();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.watermarkTextBox2 = new BPRewards2.WatermarkTextBox();
+            this.watermarkTextBox3 = new BPRewards2.WatermarkTextBox();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -114,10 +114,10 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.textBox4);
+            this.tabPage3.Controls.Add(this.watermarkTextBox3);
+            this.tabPage3.Controls.Add(this.watermarkTextBox2);
+            this.tabPage3.Controls.Add(this.watermarkTextBox1);
             this.tabPage3.Controls.Add(this.ucDataGridViewHelper3);
-            this.tabPage3.Controls.Add(this.textBox3);
-            this.tabPage3.Controls.Add(this.textBox2);
             this.tabPage3.Controls.Add(this.ucDataGridViewHelper2);
             this.tabPage3.Controls.Add(this.ucDataGridViewHelper1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
@@ -128,12 +128,26 @@
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // tabPage4
             // 
-            this.textBox4.Location = new System.Drawing.Point(339, 24);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 7;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(743, 305);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // watermarkTextBox1
+            // 
+            this.watermarkTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.watermarkTextBox1.Location = new System.Drawing.Point(6, 24);
+            this.watermarkTextBox1.Name = "watermarkTextBox1";
+            this.watermarkTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.watermarkTextBox1.TabIndex = 8;
+            this.watermarkTextBox1.Text = "Products Search";
+            this.watermarkTextBox1.WatermarkActive = true;
+            this.watermarkTextBox1.WatermarkText = "Products Search";
             // 
             // ucDataGridViewHelper3
             // 
@@ -141,20 +155,6 @@
             this.ucDataGridViewHelper3.Name = "ucDataGridViewHelper3";
             this.ucDataGridViewHelper3.Size = new System.Drawing.Size(408, 234);
             this.ucDataGridViewHelper3.TabIndex = 6;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(172, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(6, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
             // 
             // ucDataGridViewHelper2
             // 
@@ -170,15 +170,28 @@
             this.ucDataGridViewHelper1.Size = new System.Drawing.Size(150, 234);
             this.ucDataGridViewHelper1.TabIndex = 0;
             // 
-            // tabPage4
+            // watermarkTextBox2
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(743, 305);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.watermarkTextBox2.ForeColor = System.Drawing.Color.Gray;
+            this.watermarkTextBox2.Location = new System.Drawing.Point(162, 24);
+            this.watermarkTextBox2.Name = "watermarkTextBox2";
+            this.watermarkTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.watermarkTextBox2.TabIndex = 9;
+            this.watermarkTextBox2.Text = "Category Search";
+            this.watermarkTextBox2.WatermarkActive = true;
+            this.watermarkTextBox2.WatermarkText = "Category Search";
+            // 
+            // watermarkTextBox3
+            // 
+            this.watermarkTextBox3.ForeColor = System.Drawing.Color.Gray;
+            this.watermarkTextBox3.Location = new System.Drawing.Point(327, 24);
+            this.watermarkTextBox3.Name = "watermarkTextBox3";
+            this.watermarkTextBox3.Size = new System.Drawing.Size(100, 20);
+            this.watermarkTextBox3.TabIndex = 14;
+            this.watermarkTextBox3.Text = "Requirements Search";
+            this.watermarkTextBox3.WatermarkActive = true;
+            this.watermarkTextBox3.WatermarkText = "Requirements Search";
+            this.watermarkTextBox3.TextChanged += new System.EventHandler(this.watermarkTextBox3_TextChanged);
             // 
             // ucRewardDetails
             // 
@@ -211,12 +224,12 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TextBox textBox4;
         private ucDataGridViewHelper ucDataGridViewHelper3;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private ucDataGridViewHelper ucDataGridViewHelper2;
         private ucDataGridViewHelper ucDataGridViewHelper1;
         private System.Windows.Forms.TabPage tabPage4;
+        private WatermarkTextBox watermarkTextBox1;
+        private WatermarkTextBox watermarkTextBox3;
+        private WatermarkTextBox watermarkTextBox2;
     }
 }

@@ -17,7 +17,7 @@ namespace BPRewards2
             _tp2Lv.UserControlClicked += tp2Lv_UserControlClicked;
             tabPage2.Controls.Add(_tp2Lv);
 
-            _tp2Lv.dataGridView1.DataSource = DAL.GetData().Tables[0];
+            _tp2Lv.dataGridView1.DataSource = DAL.GetData();
         }
 
         void tp2Lv_UserControlClicked(object sender, EventArgs e)

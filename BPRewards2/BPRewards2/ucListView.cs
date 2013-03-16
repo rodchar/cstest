@@ -8,15 +8,16 @@ namespace BPRewards2
     {
         public event EventHandler UserControlClicked;
         public DataRowView DataRowViewSelected { get; set; }
+        public DataTable DataSource { get; set; }
 
         public ucListView()
         {
             InitializeComponent();
         }
 
-        public void UserControlClick(object sender, EventArgs e)
+        public void DataBind()
         {
-
+            dataGridView1.DataSource = this.DataSource;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

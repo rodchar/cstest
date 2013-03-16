@@ -57,6 +57,10 @@
 
         #endregion
 
+        /// <summary>
+        /// Important! Do not use DataSource property here. Use the DataSource
+        /// property of this user control then call DataBind.
+        /// </summary>
         public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
