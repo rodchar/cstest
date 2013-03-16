@@ -16,20 +16,5 @@ namespace BPRewards2
         {
             InitializeComponent();
         }
-
-        private ucListView AddNewListView(Object sender)
-        {
-            ucListView lv;
-            TabPage t = sender as TabPage;
-
-            t.Controls.Clear();
-            lv = new ucListView();
-            lv.UserControlClicked += lv_UserControlClicked;
-            t.Controls.Add(lv);
-            return lv;
-
-        }
-
-
     }
 }

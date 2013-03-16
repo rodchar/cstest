@@ -55,7 +55,7 @@
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.UserControlClick);
+            this.btnSave.Click += new System.EventHandler(this.RewardDetailsClick);
             // 
             // label3
             // 
@@ -99,7 +99,7 @@
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.UserControlClick);
+            this.btnCancel.Click += new System.EventHandler(this.RewardDetailsClick);
             // 
             // tabControl2
             // 

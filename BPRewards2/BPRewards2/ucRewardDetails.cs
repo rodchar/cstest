@@ -6,7 +6,7 @@ namespace BPRewards2
 {
     public partial class ucRewardDetails : UserControl
     {
-        public event EventHandler UserControlClicked;
+        public event EventHandler RewardDetailClicked;
 
         int _rewardId;
 
@@ -26,9 +26,9 @@ namespace BPRewards2
             ucDataGridViewHelper3.dataGridView1.DataSource = dt;
         }
 
-        public void UserControlClick(object sender, EventArgs e)
+        public void RewardDetailsClick(object sender, EventArgs e)
         {
-            if (UserControlClicked != null) UserControlClicked(sender, e);
+            if (RewardDetailClicked != null) RewardDetailClicked(sender, e);
 
         }
     }

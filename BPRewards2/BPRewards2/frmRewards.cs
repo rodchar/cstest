@@ -4,34 +4,35 @@ namespace BPRewards2
 {
     public partial class Form1
     {
-        ucRewardDetails uc;
-        ucListView tp1lv;
+        ucRewardDetails _tp1RewardDetailsUc;
+        ucListView _tp1Lv;
         int _id;
+
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             if (tabPage1.Controls.Count == 0)
             {
-                tp1lv = AddNewListView(sender);
+                _tp1Lv = new ucListView();
+                _tp1Lv.UserControlClicked += tp1Lv_UserControlClicked;
+                tabPage1.Controls.Add(_tp1Lv);
             }
         }
 
-        void lv_UserControlClicked(object sender, EventArgs e)
+        void tp1Lv_UserControlClicked(object sender, EventArgs e)
         {
-            tp1lv.Visible = false;
+            _tp1Lv.Visible = false;
             //Todo: remove this hard code
             _id = 1;
 
-            uc = new ucRewardDetails(_id);
-            uc.UserControlClicked += uc_UserControlClicked;
-            tabPage1.Controls.Add(uc);
-
+            _tp1RewardDetailsUc = new ucRewardDetails(_id);
+            _tp1RewardDetailsUc.RewardDetailClicked += uc_RewardDetailsClicked;
+            tabPage1.Controls.Add(_tp1RewardDetailsUc);
         }
 
-        void uc_UserControlClicked(object sender, EventArgs e)
+        void uc_RewardDetailsClicked(object sender, EventArgs e)
         {
-            uc.Visible = false;
-            tp1lv.Visible = true;
-            tp1lv.lblTester.Text = "From Rewards";
+            _tp1RewardDetailsUc.Visible = false;
+            _tp1Lv.Visible = true;
         }
     }
 }
