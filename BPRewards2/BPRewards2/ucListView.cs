@@ -12,9 +12,17 @@ namespace BPRewards2
 {
     public partial class ucListView : UserControl
     {
+        public event EventHandler UserControlClicked;
+
         public ucListView()
         {
             InitializeComponent();
+        }
+
+        public void UserControlClick(object sender, EventArgs e)
+        {
+            if (UserControlClicked != null) UserControlClicked(sender, e);
+ 
         }
     }
 }

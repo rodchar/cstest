@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.ucDataGridViewHelper3 = new BPRewards2.ucDataGridViewHelper();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.ucDataGridViewHelper3 = new BPRewards2.ucDataGridViewHelper();
             this.ucDataGridViewHelper2 = new BPRewards2.ucDataGridViewHelper();
             this.ucDataGridViewHelper1 = new BPRewards2.ucDataGridViewHelper();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Location = new System.Drawing.Point(123, 44);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.Location = new System.Drawing.Point(123, 44);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.UserControlClick);
             // 
             // label3
             // 
@@ -90,14 +91,15 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
             // 
-            // button1
+            // btnCancel
             // 
-            this.button1.Location = new System.Drawing.Point(25, 44);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCancel.Location = new System.Drawing.Point(25, 44);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.UserControlClick);
             // 
             // tabControl2
             // 
@@ -133,6 +135,13 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
             // 
+            // ucDataGridViewHelper3
+            // 
+            this.ucDataGridViewHelper3.Location = new System.Drawing.Point(327, 50);
+            this.ucDataGridViewHelper3.Name = "ucDataGridViewHelper3";
+            this.ucDataGridViewHelper3.Size = new System.Drawing.Size(408, 234);
+            this.ucDataGridViewHelper3.TabIndex = 6;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(172, 24);
@@ -146,23 +155,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 4;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(743, 305);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // ucDataGridViewHelper3
-            // 
-            this.ucDataGridViewHelper3.Location = new System.Drawing.Point(327, 50);
-            this.ucDataGridViewHelper3.Name = "ucDataGridViewHelper3";
-            this.ucDataGridViewHelper3.Size = new System.Drawing.Size(408, 234);
-            this.ucDataGridViewHelper3.TabIndex = 6;
             // 
             // ucDataGridViewHelper2
             // 
@@ -178,16 +170,26 @@
             this.ucDataGridViewHelper1.Size = new System.Drawing.Size(150, 234);
             this.ucDataGridViewHelper1.TabIndex = 0;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(743, 305);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // ucRewardDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tabControl2);
             this.Name = "ucRewardDetails";
             this.Size = new System.Drawing.Size(751, 539);
@@ -201,12 +203,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox4;
