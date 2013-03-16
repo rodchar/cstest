@@ -17,15 +17,8 @@ namespace BPRewards2
             _rewardId = rewardId;
 
             //Todo: Remove this from production
-            DataSet ds = new DataSet();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("CustomerId", typeof(int));
-            dt.Columns.Add("FirstName", typeof(string));
-            DataRow dr1 = dt.NewRow();
-            DataRow dr2 = dt.NewRow();
-            dt.Rows.Add(1, "Charity");
-            dt.Rows.Add(2, "Rodney");
-            ds.Tables.Add(dt);
+            DataSet ds = DAL.GetData();
+            DataTable dt = ds.Tables[0];
             //end todo
 
             ucDataGridViewHelper1.dataGridView1.DataSource = dt;

@@ -8,9 +8,15 @@ namespace BPRewards2
 {
     public partial class Form1
     {
+        ucListView tp2lv;
+
         private void tabPage2_Enter(object sender, EventArgs e)
         {
-            AddNewListView(sender);
+            tp2lv = AddNewListView(sender);
+
+            tp2lv.dataGridView1.DataSource = DAL.GetData().Tables[0];
+
+
         }
     }
 }
