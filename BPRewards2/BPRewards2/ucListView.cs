@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace BPRewards2
 {
-    public partial class ucDataGridViewHelper : UserControl
+    public partial class ucListView : UserControl
     {
         public event EventHandler DataGridViewHelperClicked;
         public DataRowView DataRowViewSelected { get; set; }
         public DataTable DataSource { get; set; }
 
-        public ucDataGridViewHelper()
+        public ucListView()
         {
             InitializeComponent();
         }

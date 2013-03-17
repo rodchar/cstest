@@ -9,11 +9,11 @@ namespace BPRewards2
 {
     public partial class Form1
     {
-        ucDataGridViewHelper _tp2Lv;
+        ucListView _tp2Lv;
 
         private void tabPage2_Enter(object sender, EventArgs e)
         {
-            _tp2Lv = new ucDataGridViewHelper();
+            _tp2Lv = new ucListView();
             _tp2Lv.Size = new System.Drawing.Size(600, 400);
 
             _tp2Lv.DataGridViewHelperClicked += DataGridViewHelperClicked_tp2Lv;

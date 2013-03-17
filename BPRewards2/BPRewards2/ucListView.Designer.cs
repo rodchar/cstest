@@ -1,6 +1,6 @@
 ﻿namespace BPRewards2
 {
-    partial class ucDataGridViewHelper
+    partial class ucListView
     {
         /// <summary> 
         /// Required designer variable.

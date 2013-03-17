@@ -37,9 +37,9 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.ucDataGridViewHelper3 = new BPRewards2.ucDataGridViewHelper();
-            this.ucDataGridViewHelper2 = new BPRewards2.ucDataGridViewHelper();
-            this.ucDataGridViewHelper1 = new BPRewards2.ucDataGridViewHelper();
+            this.ucDataGridViewHelper3 = new BPRewards2.ucListView();
+            this.ucDataGridViewHelper2 = new BPRewards2.ucListView();
+            this.ucDataGridViewHelper1 = new BPRewards2.ucListView();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -190,9 +190,9 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
-        private ucDataGridViewHelper ucDataGridViewHelper3;
-        private ucDataGridViewHelper ucDataGridViewHelper2;
-        private ucDataGridViewHelper ucDataGridViewHelper1;
+        private ucListView ucDataGridViewHelper3;
+        private ucListView ucDataGridViewHelper2;
+        private ucListView ucDataGridViewHelper1;
         private System.Windows.Forms.TabPage tabPage4;
     }
 }

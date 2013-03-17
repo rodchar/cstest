@@ -59,11 +59,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucDataGridViewHelper.cs">
+    <Compile Include="ucListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucDataGridViewHelper.Designer.cs">
-      <DependentUpon>ucDataGridViewHelper.cs</DependentUpon>
+    <Compile Include="ucListView.Designer.cs">
+      <DependentUpon>ucListView.cs</DependentUpon>
     </Compile>
     <Compile Include="ucRewardDetails.cs">
       <SubType>UserControl</SubType>
@@ -86,8 +86,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ucDataGridViewHelper.resx">
-      <DependentUpon>ucDataGridViewHelper.cs</DependentUpon>
+    <EmbeddedResource Include="ucListView.resx">
+      <DependentUpon>ucListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucRewardDetails.resx">
       <DependentUpon>ucRewardDetails.cs</DependentUpon>

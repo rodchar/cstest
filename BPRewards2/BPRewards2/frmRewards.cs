@@ -5,14 +5,14 @@ namespace BPRewards2
     public partial class Form1
     {
         ucRewardDetails _tp1RewardDetailsUc;
-        ucDataGridViewHelper _tp1Lv;
+        ucListView _tp1Lv;
         int _id;
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             if (tabPage1.Controls.Count == 0)
             {
-                _tp1Lv = new ucDataGridViewHelper();
+                _tp1Lv = new ucListView();
                 _tp1Lv.Size = new System.Drawing.Size(600, 400);
 
                 _tp1Lv.DataGridViewHelperClicked += DataGridViewHelperClicked_tp1Lv;
