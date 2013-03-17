@@ -5,15 +5,17 @@ namespace BPRewards2
     public partial class Form1
     {
         ucRewardDetails _tp1RewardDetailsUc;
-        ucListView _tp1Lv;
+        ucDataGridViewHelper _tp1Lv;
         int _id;
 
         private void tabPage1_Enter(object sender, EventArgs e)
         {
             if (tabPage1.Controls.Count == 0)
             {
-                _tp1Lv = new ucListView();
-                _tp1Lv.UserControlClicked += tp1Lv_UserControlClicked;
+                _tp1Lv = new ucDataGridViewHelper();
+                _tp1Lv.Size = new System.Drawing.Size(600, 400);
+
+                _tp1Lv.DataGridViewHelperClicked += DataGridViewHelperClicked_tp1Lv;
 
                 _tp1Lv.DataSource = DAL.GetData2();
                 _tp1Lv.DataBind();
@@ -22,7 +24,7 @@ namespace BPRewards2
             }
         }
 
-        void tp1Lv_UserControlClicked(object sender, EventArgs e)
+        void DataGridViewHelperClicked_tp1Lv(object sender, EventArgs e)
         {
             _tp1Lv.Visible = false;
             //Todo: remove this hard code

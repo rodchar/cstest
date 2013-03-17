@@ -65,12 +65,6 @@
     <Compile Include="ucDataGridViewHelper.Designer.cs">
       <DependentUpon>ucDataGridViewHelper.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucListView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucListView.Designer.cs">
-      <DependentUpon>ucListView.cs</DependentUpon>
-    </Compile>
     <Compile Include="ucRewardDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,9 +88,6 @@
     </Compile>
     <EmbeddedResource Include="ucDataGridViewHelper.resx">
       <DependentUpon>ucDataGridViewHelper.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucListView.resx">
-      <DependentUpon>ucListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucRewardDetails.resx">
       <DependentUpon>ucRewardDetails.cs</DependentUpon>
