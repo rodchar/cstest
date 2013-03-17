@@ -27,13 +27,13 @@ namespace BPRewards2
         {
             //Todo: Remove this from production
             DataTable dt = new DataTable();
-            dt.Columns.Add("CustomerId", typeof(int));
-            dt.Columns.Add("FirstName", typeof(string));
+            dt.Columns.Add("RewardId", typeof(int));
+            dt.Columns.Add("Campaign", typeof(string));
             DataRow dr1 = dt.NewRow();
             DataRow dr2 = dt.NewRow();
-            dt.Rows.Add(4, "Carey");
-            dt.Rows.Add(5, "Katie-Scarlet");
-            dt.Rows.Add(6, "Thomas-James");
+            dt.Rows.Add(4, "Campaign1");
+            dt.Rows.Add(5, "Campaign2");
+            dt.Rows.Add(6, "Campaign3");
             return dt;
             //end todo
         }
