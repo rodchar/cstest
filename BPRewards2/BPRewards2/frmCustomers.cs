@@ -16,14 +16,14 @@ namespace BPRewards2
             _tp2Lv = new ucListView();
             _tp2Lv.Size = new System.Drawing.Size(600, 400);
 
-            _tp2Lv.DataGridViewHelperClicked += DataGridViewHelperClicked_tp2Lv;
+            _tp2Lv.DataGridViewHelperClicked += ListViewClicked_tp2Lv;
             tabPage2.Controls.Add(_tp2Lv);
 
             _tp2Lv.DataSource = DAL.GetData();
             _tp2Lv.DataBind();
         }
 
-        void DataGridViewHelperClicked_tp2Lv(object sender, EventArgs e)
+        void ListViewClicked_tp2Lv(object sender, EventArgs e)
         {
             //This event means a row was selected by double-click
             if (e.GetType().Name == "DataGridViewCellEventArgs")
