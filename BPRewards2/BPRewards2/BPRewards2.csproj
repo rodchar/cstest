@@ -59,6 +59,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucDetailView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucDetailView.Designer.cs">
+      <DependentUpon>ucDetailView.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucListView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucDetailView.resx">
+      <DependentUpon>ucDetailView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucListView.resx">
       <DependentUpon>ucListView.cs</DependentUpon>
     </EmbeddedResource>
