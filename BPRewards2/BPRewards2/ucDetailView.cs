@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BPRewards2
@@ -153,7 +148,18 @@ namespace BPRewards2
             //Will return a data table so 
             //can merge with typed data table
 
+            //Todo: Refactor
+            string connectionString = string.Format(
+                @"Data Source=.\sqlexpress; Initial Catalog={0}; Integrated Security=true", "Northwind");
+            string commandText = "select * from customers";
+            System.Data.SqlClient.SqlDataAdapter da = new System.Data.SqlClient.SqlDataAdapter(commandText,connectionString);
+            //http://stackoverflow.com/q/6569012/139698
+            System.Data.SqlClient.SqlCommandBuilder projectBuilder = new System.Data.SqlClient.SqlCommandBuilder(da);
+            DataTable newDt = _dataSources[0].GetChanges(DataRowState.Modified);
+            da.Update(newDt);
+
             _dataSources[0].AcceptChanges();
+
 
             return _dataSources[0];
         }
