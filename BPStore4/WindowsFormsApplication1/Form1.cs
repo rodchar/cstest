@@ -36,9 +36,10 @@ namespace WindowsFormsApplication1
             switch (ActiveTab)
             {
                 case "Customers":
-                    Load
+                    LoadCustomers();
                     break;
                 case "Rewards":
+                    LoadRewards();
                     break;
                 default:
                     break;
