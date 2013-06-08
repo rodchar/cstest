@@ -9,11 +9,13 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-            tabControl1.Click += delegate { HandleTabClickOnMainControl(tabControl1.SelectedTab.Text); };
-            tabControl2.Click += delegate { HandleTabClickOnMainControl(tabControl2.SelectedTab.Text); };
+            tabControl1.Click += delegate { HandleSelectedTab(tabControl1.SelectedTab.Text); };
+            tabControl2.Click += delegate { HandleSelectedTab(tabControl2.SelectedTab.Text); };
+
+            //Todo: Load default tab here.
         }
 
-        public void HandleTabClickOnMainControl(string tabName)
+        public void HandleSelectedTab(string tabName)
         {
             //http://stackoverflow.com/a/540075
             Type thisType = this.GetType();
@@ -29,6 +31,8 @@ namespace WindowsFormsApplication1
         public void Rewards()
         {
             MessageBox.Show("Rewards tab");
+
+            HandleSelectedTab(tabControl2.SelectedTab.Text);
         }
 
         public void Requirements()
